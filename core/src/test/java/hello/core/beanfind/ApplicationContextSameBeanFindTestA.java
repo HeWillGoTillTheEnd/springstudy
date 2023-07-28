@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
-public class ApplicationContextSameBeanFindTest {
+public class ApplicationContextSameBeanFindTestA {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(SameBeanConfig.class);
 

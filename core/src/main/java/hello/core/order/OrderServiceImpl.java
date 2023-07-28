@@ -4,8 +4,12 @@ import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
+
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
@@ -20,6 +24,7 @@ public class OrderServiceImpl implements OrderService{
     //OrderServiceImpl의 소스코드도 함께 변경해야되기 때문에 OCP원칙도 위반
     //문제 해결을 위해 구현객체를 대신 생성해서 주입해줘야함
     //인터페이스에만 의존하도록 변경했으나 구현체가 없기 때문에 NullPointerException이 발생
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
@@ -32,4 +37,9 @@ public class OrderServiceImpl implements OrderService{
     }
     //오더 서비스 입장에서는 할인에 대해서 알 수 없음,할인에 대한것은 discountPolicy에서 다 처리하고 결과만 던져줌 -> 단일책임 원칙을 잘 지켜줌
     //주문쪽을 고칠 필요가 없음, 단일 책임원칙이 잘 지켜지지 않았다면 할인과 관련된 변경을 해도 OrderService에서 해야될 수도 있음
+
+    //테스트 용도
+    public MemberRepository getMemberRepository(){
+        return  memberRepository;
+    }
 }
