@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hello.core.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello.item-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hello.item-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello.jdbc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hello.jdbc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello.jdbc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/hello.jdbc.test.iml" />
