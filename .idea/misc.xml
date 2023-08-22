@@ -3,11 +3,14 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/core" />
+    <file type="web" url="file://$PROJECT_DIR$/form" />
     <file type="web" url="file://$PROJECT_DIR$/item-service" />
     <file type="web" url="file://$PROJECT_DIR$/jdbc" />
+    <file type="web" url="file://$PROJECT_DIR$/message" />
     <file type="web" url="file://$PROJECT_DIR$/servlet" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc" />
     <file type="web" url="file://$PROJECT_DIR$/thymeleaf-basic" />
+    <file type="web" url="file://$PROJECT_DIR$/validation" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="zulu-11" project-jdk-type="JavaSDK" />
 </project>
