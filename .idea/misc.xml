@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/core" />
+    <file type="web" url="file://$PROJECT_DIR$/exception" />
     <file type="web" url="file://$PROJECT_DIR$/form" />
     <file type="web" url="file://$PROJECT_DIR$/item-service" />
     <file type="web" url="file://$PROJECT_DIR$/jdbc" />
