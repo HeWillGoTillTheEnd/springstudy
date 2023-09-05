@@ -12,6 +12,7 @@
     <file type="web" url="file://$PROJECT_DIR$/servlet" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc" />
     <file type="web" url="file://$PROJECT_DIR$/thymeleaf-basic" />
+    <file type="web" url="file://$PROJECT_DIR$/typeconverter" />
     <file type="web" url="file://$PROJECT_DIR$/validation" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="zulu-11" project-jdk-type="JavaSDK" />
