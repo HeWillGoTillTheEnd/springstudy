@@ -6,6 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/exception" />
     <file type="web" url="file://$PROJECT_DIR$/form" />
     <file type="web" url="file://$PROJECT_DIR$/item-service" />
+    <file type="web" url="file://$PROJECT_DIR$/itemservice-db" />
     <file type="web" url="file://$PROJECT_DIR$/jdbc" />
     <file type="web" url="file://$PROJECT_DIR$/login" />
     <file type="web" url="file://$PROJECT_DIR$/message" />
