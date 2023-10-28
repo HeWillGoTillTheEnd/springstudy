@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello.servlet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hello.servlet.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hello.springmvc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hello.springmvc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/item-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/item-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/itemservice-db.main.iml" filepath="$PROJECT_DIR$/.idea/modules/itemservice-db.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/itemservice-db.test.iml" filepath="$PROJECT_DIR$/.idea/modules/itemservice-db.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/jdbc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/jdbc.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lecture.iml" filepath="$PROJECT_DIR$/.idea/lecture.iml" />
