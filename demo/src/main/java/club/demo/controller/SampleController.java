@@ -3,9 +3,13 @@ package club.demo.controller;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.ProviderManager;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.security.Principal;
 
 @Controller
 @Slf4j
@@ -24,7 +28,7 @@ public class SampleController {
 
 
     @GetMapping("/admin")
-    public void exAdmin(){
+    public void exAdmin(Principal principal){
         log.info("exAdmin..........");
     }
 
