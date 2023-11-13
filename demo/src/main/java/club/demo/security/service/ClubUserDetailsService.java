@@ -29,7 +29,7 @@ public class ClubUserDetailsService implements UserDetailsService {
           throw new UsernameNotFoundException("계정이 존재하지 않습니다.");
       }
       ClubMember clubMember = result.get();
-        log.info("-------------------------------------------------");
+        log.info("-------------------------------------------------!");
         log.info("{}",clubMember);
 
         ClubAuthMemberDTO clubAuthMember = new ClubAuthMemberDTO(
@@ -40,6 +40,7 @@ public class ClubUserDetailsService implements UserDetailsService {
                         .map(role -> new SimpleGrantedAuthority("ROLE_" + role.name())).collect(Collectors.toSet()));
 
         clubAuthMember.setName(clubMember.getName());
+        clubAuthMember.setPassword(clubMember.getPassword());
         clubAuthMember.setFromSocial(clubMember.isFromSocial());
         return clubAuthMember;
     }

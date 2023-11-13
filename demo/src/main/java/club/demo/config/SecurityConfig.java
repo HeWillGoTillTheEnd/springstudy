@@ -1,22 +1,23 @@
 package club.demo.config;
 
+import club.demo.security.handler.ClubLoginSuccessHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
+
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
 @Slf4j
-public class SecurityConfig {
+@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
+public class SecurityConfig{
 
     @Bean
     public PasswordEncoder passwordEncoder(){
@@ -35,14 +36,24 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((auth) -> {
-            auth.antMatchers("/sample/all").permitAll()
-                    .antMatchers("/sample/member").hasRole("USER")
-                    .antMatchers("/sample/admin").hasRole("ADMIN");
-        });
+//        http.authorizeHttpRequests((auth) -> {
+//            auth.antMatchers("/sample/all").permitAll()
+//                    .antMatchers("/sample/member").hasRole("USER")
+//                    .antMatchers("/sample/admin").hasRole("ADMIN");
+//        });
         http.formLogin();
         http.csrf();
         http.logout();
+
+        http.rememberMe().tokenValiditySeconds(60 * 60 * 24 * 7);
+
+        http.oauth2Login().successHandler(clubLoginSuccessHandler());
+
         return http.build();
+    }
+
+    @Bean
+    public ClubLoginSuccessHandler clubLoginSuccessHandler() {
+        return new ClubLoginSuccessHandler(passwordEncoder());
     }
 }
