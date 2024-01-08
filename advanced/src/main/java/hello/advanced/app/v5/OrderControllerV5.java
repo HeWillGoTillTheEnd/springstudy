@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+
 @RestController
 public class OrderControllerV5 {
 
@@ -22,6 +24,8 @@ public class OrderControllerV5 {
 
     @GetMapping("/v5/request")
     public String request(String itemId) {
+        HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
+        stringIntegerHashMap
         return template.execute("OrderController.request()", new TraceCallback<>() {
             @Override
             public String call() {
